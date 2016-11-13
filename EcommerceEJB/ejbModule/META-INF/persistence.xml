@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="EcommerceEJB" transaction-type="JTA">
+
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:/dsEcommerce</jta-data-source>
+		<class>ejb.entitites.ecommerce.Auteur</class>
+		<class>ejb.entitites.ecommerce.Realisateur</class>
+		<class>ejb.entitites.ecommerce.Dvd</class>
+		<class>ejb.entitites.ecommerce.Client</class>
+		<class>ejb.entitites.banque.CompteBancaire</class>
+		<class>ejb.entitites.ecommerce.CompteEcommerce</class>
+		<class>ejb.entities.commande.Commande</class>
+		<class>ejb.entities.commande.LotDvds</class>
+		<class>ejb.entities.stock.StockUnitaire</class>
+		<class>ejb.entities.fournisseur.Fournisseur</class>
+		<class>ejb.entities.fournisseur.Editeur</class>
+		<class>ejb.entities.commande.SousCommande</class>
+
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+		</properties>
+	</persistence-unit>
+</persistence>
